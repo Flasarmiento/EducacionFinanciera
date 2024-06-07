@@ -98,5 +98,15 @@ let preguntas = [
             {texto: "Algo inseguro.", valor: 3},
             {texto: "Muy inseguro.", valor: 4}
         ]
+    }, 
+    {
+        id: 11,
+        pregunta: "¿Te gusta el curso?",
+        opciones: [
+            {texto: "Muy confiado.", valor: 1},
+            {texto: "Bastante confiado.", valor: 2},
+            {texto: "Algo inseguro.", valor: 3},
+            {texto: "Muy inseguro.", valor: 4}
+        ]
     }
 ];
