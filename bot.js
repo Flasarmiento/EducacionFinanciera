@@ -11,6 +11,8 @@ const userMessage = [
     ["cuantos años tienes"],
     /* 4 */
     ["adiós", "adiós", "cuídate"],
+    /* 4.1 */
+    ["gracias","gracias por la ayuda"],    
     /* 5 */
     ["quién eres", "eres humano", "humano", "eres robot", "eres humano o robot", "qué eres", "háblame de ti", "quien sos"],
     /* 6 */
@@ -100,6 +102,8 @@ const botReply = [
     ["Siempre soy joven. 👶"],
     /* 4 */
     ["¡Adiós! 👋", "¡Adiós! 😊", "¡Por favor, cuídate! 🌼"],
+    /* 4.1 */
+    ["¡Para eso estoy! 👋", "¡A ti por preguntar! 😊", "¡Por favor, no me agaradezcas! 🌼"],    
     /* 5 */
     ["Solo soy un bot 😄", "Soy un bot. ¿Qué eres tú? 🤖", "Soy un extraterrestre que viene a conquistar el mundo 😅", "Solo vas a preguntar por mi o vamos a hablar de verdad! 😊"],
     /* 6 */
