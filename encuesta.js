@@ -39,6 +39,7 @@ function calcularResultado() {
     if (puntaje <= 15) {
         resultado = '¡Excelente salud financiera!';
         textoIntro = 'Tu salud financiera es sólida y demuestras un buen control sobre tus finanzas personales. Aquí están algunos puntos destacados:. Haz click <a href="#">aqui</a>';
+        textoFin = 'Aunque ya estás en un gran camino, siempre hay margen para mejorar y optimizar. Te invitamos a unirte a nuestro Curso de Educación Financiera para: •	Refinar tus estrategias de inversión: Aprende sobre nuevas oportunidades y herramientas para maximizar tus rendimientos. •	Evaluación y ajuste de objetivos: Mantén tus metas financieras actualizadas y ajusta tu plan según tus necesidades ';
         sugerencias = [
             { title: 'Gestión eficiente del ahorro', content: 'Has logrado establecer un ahorro constante y tienes un fondo de emergencia..' },
             { title: 'Presupuesto bien definido', content: 'Mantienes un presupuesto equilibrado que te permite alcanzar tus metas financieras..' },
@@ -46,21 +47,30 @@ function calcularResultado() {
         ];
     } else if (puntaje <= 25) {
         resultado = 'Buena salud financiera, pero con margen de mejora.';
-        textoIntro = 'Tienes una buena salud financiera, pero siempre hay espacio para mejorar. Aquí tienes algunas recomendaciones que te pueden ayudar a optimizar tu situación financiera. Realiza nuestro curso de educación financiera. Haz click <a href="#">aqui</a>';
+        textoIntro = 'Tu salud financiera está en buen camino, pero hay áreas en las que podrías mejorar para alcanzar una mayor estabilidad y crecimiento. Aquí están algunos puntos clave. Haz click <a href="#">aqui</a>';
+        textoFin = 'Para ayudarte a fortalecer estas áreas, te invitamos a unirte a nuestro Curso de Educación Financiera donde aprenderás a:
+•	Establecer un plan de ahorro sólido: Descubre métodos efectivos para ahorrar de manera constante.
+•	Crear un presupuesto robusto: Aprende a diseñar y adherirte a un presupuesto que funcione para ti.
+•	Manejo avanzado de deudas: Conoce técnicas para reducir tus deudas más rápido y de manera más eficiente.
+';
         sugerencias = [
-            { title: 'Revisa tus gastos y ajusta tu presupuesto', content: 'Revisar periódicamente tus gastos y ajustar tu presupuesto puede ayudarte a identificar áreas de mejora.' },
-            { title: 'Aumenta tu ahorro mensual', content: 'Intentar ahorrar un poco más cada mes puede tener un gran impacto a largo plazo.' },
-            { title: 'Fortalece tu fondo de emergencia', content: 'Asegúrate de tener suficiente dinero en tu fondo de emergencia para cubrir al menos 3-6 meses de gastos.' }
+            { title: 'Ahorro irregular', content: 'Aunque tienes la intención de ahorrar, no siempre lo logras de manera constante.' },
+            { title: 'Presupuesto flexible', content: 'Mantienes un presupuesto, pero a veces es difícil seguirlo al pie de la letra.' },
+            { title: 'Deudas manejables', content: 'Tienes algunas deudas bajo control, pero podrías beneficiarte de estrategias adicionales para reducirlas más rápidamente.' }
         ];
     } else {
         resultado = 'Necesitas mejorar tu salud financiera.';
-        textoIntro = 'Es importante que tomes medidas para mejorar tu salud financiera. A continuación, algunas recomendaciones que pueden ayudarte a empezar. Realiza nuestro curso de educación financiera. Haz click <a href="#">aqui</a>';
+        textoIntro = 'Es importante que tomes medidas para mejorar tu salud financiera. Tu salud financiera presenta algunas áreas críticas que requieren atención inmediata. Aquí están algunos puntos preocupantes:. Haz click <a href="#">aqui</a>';
+        textoFin = 'No te preocupes, estamos aquí para ayudarte a mejorar y tomar el control de tus finanzas. Te invitamos a unirte a nuestro Curso de Educación Financiera, donde aprenderás a:
+•	Iniciar y mantener un hábito de ahorro: Implementa estrategias prácticas para empezar a ahorrar de inmediato.
+•	Crear y seguir un presupuesto efectivo: Establece un presupuesto que te permita gestionar tus gastos y aumentar tus ahorros.
+•	Reducir y manejar tus deudas: Conoce técnicas para reducir tus deudas y evitar que crezcan.
+';
         sugerencias = [
-            { title: 'Crea un presupuesto y síguelo', content: 'Un presupuesto te ayudará a controlar tus gastos y a evitar gastos innecesarios.' },
-            { title: 'Reduce gastos innecesarios', content: 'Identifica y elimina los gastos que no son esenciales para mejorar tu salud financiera.' },
-            { title: 'Empieza un fondo de emergencia', content: 'Comienza a ahorrar para un fondo de emergencia para estar preparado para cualquier imprevisto.' },
-            { title: 'Busca asesoramiento financiero', content: 'Un asesor financiero puede ayudarte a planificar mejor tus finanzas y a alcanzar tus objetivos.' }
-        ];
+            { title: 'Falta de ahorro', content: 'No has logrado establecer un fondo de emergencia o ahorrar de manera regular.' },
+            { title: 'Presupuesto inexistente o ineficaz', content: 'No tienes un presupuesto definido, lo que dificulta la gestión de tus finanzas.' },
+            { title: 'Deudas crecientes', content: 'Tienes deudas considerables que no estás manejando de una forma óptima.' },
+                 ];
     }
 
     document.getElementById('resultado').innerText = resultado;
