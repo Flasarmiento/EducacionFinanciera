@@ -51,12 +51,12 @@ let preguntas = [
     },
     {
         id: 6,
-        pregunta: "¿Tienes seguro de vida o de salud?",
+        pregunta: "¿Con qué frecuencia te encontras gastando más de lo que ganas?",
         opciones: [
-            {texto: "Sí, tengo ambos seguros.", valor: 1},
-            {texto: "Solo tengo seguro de salud.", valor: 2},
-            {texto: "Solo tengo seguro de vida.", valor: 3},
-            {texto: "No tengo ningún seguro.", valor: 4}
+            {texto: "Nunca.", valor: 1},
+            {texto: "Ocasionalmente.", valor: 2},
+            {texto: "Frecuentemente.", valor: 3},
+            {texto: "Siempre.", valor: 4}
         ]
     },
     {
@@ -84,29 +84,29 @@ let preguntas = [
         pregunta: "¿Con qué frecuencia revisas y ajustas tu plan financiero?",
         opciones: [
             {texto: "Regularmente, al menos una vez al mes.", valor: 1},
-            {texto: "De vez en cuando, tal vez una vez al trimestre.", valor: 2},
+            {texto: "De vez en cuando, tal vez una vez cada tres meses.", valor: 2},
             {texto: "Rara vez, tal vez una vez al año.", valor: 3},
             {texto: "Nunca reviso ni ajusto mi plan financiero.", valor: 4}
         ]
     },
     {
         id: 10,
-        pregunta: "¿Qué tan confiado te sientes acerca de tu futuro financiero?",
+        pregunta: "¿Usualmente elaboras un plan para alcanzar tus objetivos financieros a corto, mediano y largo plazo?",
         opciones: [
-            {texto: "Muy confiado.", valor: 1},
-            {texto: "Bastante confiado.", valor: 2},
-            {texto: "Algo inseguro.", valor: 3},
-            {texto: "Muy inseguro.", valor: 4}
+            {texto: "Sí, tengo un plan detallado y lo sigo.", valor: 1},
+            {texto: "Tengo un plan, pero no es muy detallado y no siempre lo sigo.", valor: 2},
+            {texto: "Estoy empezando a planificar mis objetivos financieros.", valor: 3},
+            {texto: "No tengo un plan.", valor: 4}
         ]
     }, 
     {
         id: 11,
-        pregunta: "¿Te gusta el curso?",
+        pregunta: "¿Qué tan familiarizado estás con las diferentes opciones de inversión disponibles (Plazo fijo, acciones, bonos, fondos comunes de inversión, etc)?",
         opciones: [
-            {texto: "Muy confiado.", valor: 1},
-            {texto: "Bastante confiado.", valor: 2},
-            {texto: "Algo inseguro.", valor: 3},
-            {texto: "Muy inseguro.", valor: 4}
+            {texto: "Estoy bien informado y tengo una cartera de inversiones diversificada.", valor: 1},
+            {texto: "Tengo conocimientos básicos y he comenzado a invertir.", valor: 2},
+            {texto: "He oído hablar de algunas opciones, pero no las entiendo bien.", valor: 3},
+            {texto: "No estoy familiarizado con las opciones de inversión.", valor: 4}
         ]
     }
 ];
