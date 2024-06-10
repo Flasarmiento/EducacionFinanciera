@@ -38,11 +38,11 @@ function calcularResultado() {
     let sugerencias = [];
     if (puntaje <= 15) {
         resultado = '¡Excelente salud financiera!';
-        textoIntro = 'Tienes una salud financiera envidiable, sigue así y considera estas recomendaciones para mantener y mejorar aún más tu situación financiera. Realiza nuestro curso de educación financiera. Haz click <a href="#">aqui</a>';
+        textoIntro = 'Tu salud financiera es sólida y demuestras un buen control sobre tus finanzas personales. Aquí están algunos puntos destacados:. Haz click <a href="#">aqui</a>';
         sugerencias = [
-            { title: 'Continúa con tus buenos hábitos', content: 'Seguir manteniendo un presupuesto y ahorrar consistentemente te ayudará a mantener tu excelente salud financiera.' },
-            { title: 'Considera invertir para maximizar tus ahorros', content: 'Diversificar tus inversiones y buscar nuevas oportunidades puede ayudarte a aumentar tus ahorros.' },
-            { title: 'Mantén tu fondo de emergencia actualizado', content: 'Asegúrate de que tu fondo de emergencia esté siempre listo para cubrir cualquier imprevisto.' }
+            { title: 'Gestión eficiente del ahorro', content: 'Has logrado establecer un ahorro constante y tienes un fondo de emergencia..' },
+            { title: 'Presupuesto bien definido', content: 'Mantienes un presupuesto equilibrado que te permite alcanzar tus metas financieras..' },
+            { title: 'Manejo adecuado de deudas', content: 'Tus deudas están bajo control y utilizas el crédito de manera responsable.' }
         ];
     } else if (puntaje <= 25) {
         resultado = 'Buena salud financiera, pero con margen de mejora.';
