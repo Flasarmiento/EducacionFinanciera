@@ -21,7 +21,7 @@ let preguntas = [
     },
     {
         id: 3,
-        pregunta: "¿Tienes un fondo de emergencia?",
+        pregunta: "¿Posees un fondo de emergencia?",
         opciones: [
             {texto: "Sí, tengo un fondo que cubre más de 6 meses de gastos.", valor: 1},
             {texto: "Sí, tengo un fondo que cubre de 3 a 6 meses de gastos.", valor: 2},
@@ -31,12 +31,12 @@ let preguntas = [
     },
     {
         id: 4,
-        pregunta: "¿Qué tan diversificadas están tus inversiones?",
+        pregunta: "¿Cuál es tu nivel actual de endeudamiento en comparación con tus ingresos mensuales?",
         opciones: [
-            {texto: "Muy diversificadas en diferentes tipos de activos.", valor: 1},
-            {texto: "Diversificadas pero en pocos tipos de activos.", valor: 2},
-            {texto: "Algo diversificadas, pero mayormente en un solo tipo de activo.", valor: 3},
-            {texto: "No tengo inversiones diversificadas.", valor: 4}
+            {texto: "No tengo deudas.", valor: 1},
+            {texto: "Mis deudas representan menos del 20% de mis ingresos mensuales.", valor: 2},
+            {texto: "Mis deudas representan entre el 20% y el 50% de mis ingresos mensuales.", valor: 3},
+            {texto: "Mis deudas representan más del 50% de mis ingresos mensuales.", valor: 4}
         ]
     },
     {
