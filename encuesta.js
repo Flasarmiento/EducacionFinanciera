@@ -61,10 +61,10 @@ function calcularResultado() {
     } else if (puntaje <= 25) {
         resultado = 'Buena salud financiera, pero con margen de mejora.';
         textoIntro = 'Tu salud financiera está en buen camino, pero hay áreas en las que podrías mejorar para alcanzar una mayor estabilidad y crecimiento. Aquí están algunos puntos clave. Haz click <a href="#">aqui</a>';
-        textoFin = `<p><b>Para ayudarte a fortalecer estas áreas, <br>te invitamos a unirte a nuestro Curso de Educación Financiera donde aprenderás a:</b></p>
+        textoFin = `<p><b>Para ayudarte a fortalecer estas áreas. <br>Te invitamos a unirte a nuestro Curso de Educación Financiera donde aprenderás a:</b></p>
         <ul>
             <li>Establecer un plan de ahorro sólido: Descubre métodos efectivos para ahorrar de manera constante.</li>
-            <li>Crear un presupuesto robusto: Aprende a diseñar y adherirte a un presupuesto que funcione para ti.</li>
+            <li>Crear un presupuesto: Aprende a diseñar y adherirte a un presupuesto que funcione para ti.</li>
             <li>Manejo avanzado de deudas: Conoce técnicas para reducir tus deudas más rápido y de manera más eficiente.</li>
         </ul>
         `;
