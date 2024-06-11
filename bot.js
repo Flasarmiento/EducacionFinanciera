@@ -227,7 +227,6 @@ const alternative = [
     "Estoy aquí para ayudar, pero necesito una pregunta más clara para dar una respuesta significativa. 🤷‍♂️",
     "Parece que estamos en diferentes longitudes de onda. Intente preguntar algo más. 📡",
     "Pido disculpas, pero no pude entender el significado de tu comentario. Por favor reformula tu pregunta. 🙁",
-    "Puedes contactar a Flavia:<br> Teléfono: <a href='tel:12341234'>12341234 📱</a><br> WhatsApp: <a href='https://wa.me/12341234'>12341234 💬 "
 ];
 
 let lastUserDiv;
@@ -241,50 +240,62 @@ function sendMessage() {
     }
 }
 
-//Calculation 
-function findResponse(input) {
+const stopWords = ["y", "del", "el", "la", "los", "las", "un", "una", "unos", "unas", "de", "en", "para", "con", "por", "sobre", "bajo", "detrás", "delante", "al", "a", "o", "u", "e", "¿", "?", "¡", "!", "es", "son", "más", "mi", "tu", "su", "nuestro", "vuestro", "su", "este", "ese", "aquel", "estos", "esos", "aquellos", "esta", "esa", "aquella", "estas", "esas", "aquellas", "esto", "eso", "aquello"];
+let lastReplies = [];
 
-    //checks direct messages
-    let text = cleanInput(input);
-    //console.log(text, userMessage[0])
-    const versiguardo = userMessage[0].find(message => text.includes(message.toLowerCase()));
-    if (versiguardo) {
-        //leo porque sigue hablando del tema
-      //  console.log("si encontre: ", versiguardo)
-        text = leerPregunta();
+function singularize(word) {
+    if (word.endsWith('s')) {
+        return word.slice(0, -1);
     }
-    /*else {
-           //guardo porque es pregunta nueva
-           limpiarStorage();
-           guardarPregunta(text);
-       }*/
+    return word;
+}
 
-    for (const messageGroup of userMessage) {
-        //        const matchingMessage = messageGroup.find(message => text.includes(message.toLowerCase()));
-        const ignoreWords = new Set(["el", "la", "los", "lo", "en", "es", "que es", "que", "donde"]); // Agrega más palabras si es necesario
-        const minLength = 3; // Ajusta este valor según tus necesidades
+function normalize(str) {
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().split(' ').map(singularize).join(' ');
+}
 
-        const matchingMessage = messageGroup.find(message => {
-            const words = message.toLowerCase().split(/\s+/).filter(word => !ignoreWords.has(word) && word.length >= minLength);
-            return words.some(word => text.toLowerCase().includes(word));
-        });
+function findResponse(input) {
+    let inputWords = normalize(input).split(' ').filter(word => !stopWords.includes(word));
+    let replies = [];
 
-        if (matchingMessage) {
-            //guardo porque es pregunta nueva
-            limpiarStorage();
-            guardarPregunta(text);
-            return getRandomResponseFromCategory(userMessage.indexOf(messageGroup));
+    console.log(input)
+    // Limpia el mensaje de entrada
+    //let text = cleanInput(inputWords);
+    let text = inputWords;
+    for(let i = 0; i < userMessage.length; i++) {
+        let messageWords = normalize(userMessage[i][0]).split(' ').filter(word => !stopWords.includes(word));
+        if(inputWords.some(inputWord => messageWords.some(messageWord => messageWord.includes(inputWord)))) {
+            replies.push(i);
         }
     }
+    if (replies.length > 1) {
+        let newReplies = replies.filter(index => !lastReplies.includes(index));
+        if (newReplies.length > 0) {
+            lastReplies.push(...newReplies);
+            if (lastReplies.length > replies.length - 1) {
+                lastReplies.shift();
+            }
+            // Guarda la pregunta nueva
+            limpiarStorage();
+            guardarPregunta(inputWords);
+            return getRandomResponseFromCategory(newReplies[0]); // Devuelve la primera nueva respuesta
+        }
+    } else if (replies.length === 1) {
+        // Guarda la pregunta nueva
+        limpiarStorage();
+        guardarPregunta(inputWords);
+        return getRandomResponseFromCategory(replies[0]); // Devuelve la única respuesta
+    }
+
+    // Si no se encuentra una coincidencia, busca una coincidencia directa
     const directMatch = findDirectMatch(text);
     if (directMatch) {
-        //guardo porque es pregunta nueva
         limpiarStorage();
         guardarPregunta(text);
         return directMatch;
     }
 
-    //check similarity
+    // Si aún no se encuentra una coincidencia, verifica la similitud con las preguntas predefinidas
     const SIMILARITY_THRESHOLD = 0.6;
     for (let i = 0; i < userMessage.length; i++) {
         const messageGroup = userMessage[i];
@@ -298,7 +309,7 @@ function findResponse(input) {
     }
 
     //check each word
-    const words = text.split(' ');
+    const words = text; ;
     for (const word of words) {
         if (isCommonWord(word)) {
             continue;
@@ -331,10 +342,8 @@ function calculateSimilarity(str1, str2) {
 function cleanInput(input) {
     return input
         .toLowerCase()
-        .replace(/[^\w\s'"]/gi, "")
-        .replace(/[\W_]/g, " ")
-        //.replace(/ un /g, " ")
-        //.replace(/yo siento /g, "")
+        .replace(/[^\w\s'"\ñ]/gi, "")
+        .replace(/[\W_]/g, (match) => match === 'ñ' ? 'ñ' : ' ')
         .replace(/que es/g, " ")
         .replace(/por favor /g, "")
         .replace(/ favor/g, "")
@@ -365,30 +374,20 @@ function findCategoryIndex(word) {
 
 function getRandomResponseFromCategory(categoryIndex) {
     const responses = botReply[categoryIndex];
+    const pregunta = userMessage[categoryIndex];
     let Nresp;
     do {
         Nresp = Math.floor(Math.random() * responses.length);
-    } while (responses.length > 1 && Nresp === respIdx && categoryIndex === catIdx);
+    } while (responses.length > 1 && categoryIndex === catIdx);
+
+    do {
+        Npreg = Math.floor(Math.random() * pregunta.length);
+    } while (pregunta.length > 1 && categoryIndex === catIdx);
 
     catIdx = categoryIndex;
     respIdx = Nresp;
-    //console.log(categoryIndex, Nresp)
-    return responses[Nresp];
+    return (`${pregunta[Npreg]}<br>${responses[Nresp]}`);
 }
-
-/*function getRandomResponseFromCategory(categoryIndex) {
-    const responses = botReply[categoryIndex];
-    const Nresp = Math.floor(Math.random() * responses.length)
-    if (!catIdx || !respIdx) {
-        catIdx = categoryIndex;
-        respIdx = Nresp
-    } else if (categoryIndex === catIdx &  Nresp === respIdx){
-        console.log("es la misma respuesta")
-        console.log(categoryIndex, Nresp)
-    }
-    console.log(categoryIndex, Nresp)
-    return responses[Nresp];
-}*/
 
 function getRandomAlternativeResponse() {
     return alternative[Math.floor(Math.random() * alternative.length)];
@@ -607,9 +606,6 @@ function guardarPregunta(busqueda) {
 function leerPregunta() {
     //guardo todos los usuarios registrados
     return localStorage.getItem('busqueda');
-    // Recuperar los usuarios de localStorage
-    //var storedUsers = JSON.parse(localStorage.getItem('users')) || [];
-    //console.log(storedUsers);
 };
 
 function guardoLocalStorage(busqueda) {
