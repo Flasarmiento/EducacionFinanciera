@@ -1,214 +1,211 @@
 const userMessage = [
-    /* De repeticion*/
-    ["decime mas", "segui hablando del tema", "quiero saber mas sobre eso", "interesante, hay mas?", "contame mas", "mas?", "otra cosa", "agreguega mas", "mas datos?"],
     /* 0 */
     ["hola", "hola", "hola", "hlo", "hola", "hola"],
     /* 1 */
-    ["cómo estás", "cómo estás", "cómo estás", "cómo estás", "cómo te va", "cómo va la vida"],
+    ["¿Cómo puedo inscribirme en el programa de educación financiera?"],
     /* 2 */
-    ["qué estás haciendo", "qué está pasando", "qué pasa", "wud", "qué pasa", "qué está pasando", "ok", "ok"],
+    ["¿Qué requisitos necesito cumplir para acceder al programa?"],
     /* 3 */
-    ["cuantos años tienes"],
+    ["¿Cuánto cuesta participar en el programa?"],
     /* 4 */
-    ["adiós", "adiós", "cuídate"],
-    /* 4.1 */
-    ["gracias","gracias por la ayuda"],    
+    ["¿Cuánto tiempo tengo para completar el curso?"],
     /* 5 */
-    ["quién eres", "eres humano", "humano", "eres robot", "eres humano o robot", "qué eres", "háblame de ti", "quien sos"],
+    ["¿Qué tipo de certificación obtendré al finalizar el curso?"],
     /* 6 */
-    ["quién te creó", "creador", "quién es tu creador", "quién te hizo"],
+    ["¿El curso está disponible en otros idiomas?"],
     /* 7 */
-    ["correo electrónico", "dirección", "correo"],
+    ["¿Puedo acceder al curso desde cualquier dispositivo?"],
     /* 8 */
-    ["número de desarrollador", "mensaje", "Eres malo", "contacta al desarrollador", "informe", "hay un error", "error", "quién está detrás de ti", "contacto", "teléfono", "contacto", "info", "whatsapp", "wa", "número", "Quién es amaan", "amaan", "amaan mk", "mk", "mohammed", "khalander"],
+    ["¿Hay algún soporte técnico disponible si tengo problemas con la plataforma?"],
     /* 9 */
-    ["instagram", "nombre de usuario", "enlace", "usuario", "insta"],
+    ["¿Qué sucede si no puedo terminar una lección en una sola sesión?"],
     /* 10 */
-    ["github", "repositorio", "repo", "git"],
+    ["¿Cómo se estructuran los módulos del curso?"],
     /* 11 */
-    ["tu nombre por favor", "tu nombre", "nombre", "puedo saber tu nombre", "cómo te llamas", "cómo te llamas", "dime tu nombre"],
+    ["¿Qué tipos de actividades incluye el curso?"],
     /* 12 */
-    ["te amo", "amor", "te amo", "me gustas", "eres increíble", "eres genial", "eres genial"],
+    ["¿Qué herramientas necesito para completar el curso?"],
     /* 13 */
-    ["feliz", "bueno", "divertido", "maravilloso", "fantástico", "cool", "muy bueno", "impresionante", "agradable", "excelente"],
+    ["¿Puedo interactuar con otros participantes del curso?"],
     /* 14 */
-    ["malo", "ayuda", "aburrido", "cansado", "no bien", "me siento deprimido", "me siento deprimido", "estoy triste", "triste"],
+    ["¿Los materiales del curso están disponibles para descarga?"],
     /* 15 */
-    ["¿Cuál es tu propósito?", "¿Por qué fuiste creado?", "¿Qué puedes hacer?", "Háblame de tus capacidades", "club", "¿Cuál es tu función principal?"],
+    ["¿Puedo repetir los módulos si no comprendo algo?"],
     /* 16 */
-    ["¿Cómo está el tiempo hoy?", "Dime el pronóstico del tiempo", "El tiempo hoy"],
+    ["¿Cómo se evalúa el progreso en el curso?"],
     /* 17 */
-    ["¿Cómo funciona tu modelo de lenguaje?", "creado", "idioma", "Explica tu tecnología de IA", "Cuéntame sobre tu arquitectura", "cómo trabajas", "envía tu código"],
+    ["¿Las evaluaciones son obligatorias?"],
     /* 18 */
-    ["¿Cuál es la hora ahora?", "¿Cuál es la hora actual?", "Dime la hora", "hora"],
+    ["¿Qué pasa si no paso una evaluación?"],
     /* 19 */
-    ["eventos", "noticias", "planes", "esports", "juego", "planeado", "futuro"],
+    ["¿Cómo recibo mi certificado después de completar el curso?"],
     /* 20 */
-    ["anterior", "antiguo", "visita escolar", "visita", "colegio"],
-    /* 21  - Economia*/
-    ["bono", "acciones", "bolsa", "wall street", "inversion"],
+    ["¿Puedo utilizar el certificado para mejorar mis oportunidades laborales?"],
+    /* 21 */
+    ["¿Qué pasa si olvido mi contraseña para acceder a la plataforma?"],
     /* 22 */
-    ["clases", "colegio", "visita escolar", "visita", "universidad"],
+    ["¿Cómo puedo comunicarme con los instructores del curso?"],
     /* 23 */
-    ["plata", "dinero", "moneda", "metalico", "papel moneda"],
+    ["¿El curso incluye algún tipo de mentoría personalizada?"],
     /* 24 */
-    ["CABA", "Codo a Codo", "cursos", "educacion", "horas cursos"],
+    ["¿Los contenidos del curso se actualizan regularmente?"],
     /* 25 */
-    ["que es la inflacion", "puedes explicar la inflacion", "como funciona la inflacion", "inflacion","¿Qué es la inflación?", "¿Puedes explicarme qué es la inflación?", "¿Cómo funciona la inflación?"],
+    ["¿Hay algún material recomendado adicional que deba revisar?"],
     /* 26 */
-    ["que es el PIB", "puedes explicar el PIB", "como se calcula el PIB", "PIB", "PBI","¿Qué es el PIB?", "¿Puedes explicarme qué es el Producto Interno Bruto?", "¿Cómo se calcula el PIB?"],
+    ["¿Puedo compartir mi cuenta con otra persona?"],
     /* 27 */
-    ["¿Qué es la educación financiera?", "¿Puedes explicarme qué es la educación financiera?", "¿Qué significa educación financiera?"],
+    ["¿Qué debo hacer si encuentro un error en el contenido del curso?"],
     /* 28 */
-    ["¿Cuáles son los objetivos de la educación financiera?", "¿Qué se espera lograr con la educación financiera?", "¿Qué metas tiene la educación financiera?"],
+    ["¿El curso es compatible con todas las navegadores web?"],
     /* 29 */
-    ["¿Cómo puede la educación financiera mejorar mis perspectivas de empleo?", "¿La educación financiera puede ayudarme a conseguir un mejor trabajo?", "¿Cómo la educación financiera me hace más atractivo para el mercado laboral?"],
+    ["¿Qué habilidades o conocimientos previos necesito para comenzar el curso?"],
     /* 30 */
-    ["¿Qué estrategias de ahorro enseña la educación financiera?", "¿Cómo puedo aprender a ahorrar con la educación financiera?", "¿La educación financiera me enseñará a ahorrar?"],
+    ["¿Puedo acceder al curso sin conexión a internet?"],
     /* 31 */
-    ["¿La educación financiera me enseñará a manejar deudas?", "¿Cómo puedo aprender a gestionar deudas con la educación financiera?", "¿La educación financiera me ayudará a entender las deudas?"],
+    ["¿Qué beneficios puedo obtener al mejorar mis habilidades financieras a través de este programa?"],
     /* 32 */
-    ["¿Qué opciones de inversión puedo aprender con la educación financiera?", "¿La educación financiera me enseñará sobre inversiones?", "¿Puedo aprender sobre productos financieros con la educación financiera?"],
+    ["¿Qué temas específicos cubre el módulo de Emprendedurismo?"],
     /* 33 */
-    ["¿La educación financiera me enseñará a usar herramientas digitales?", "¿Cómo puedo aprender a usar aplicaciones financieras con la educación financiera?", "¿La educación financiera me ayudará a manejar mis finanzas digitalmente?"],
+    ["¿Qué tipo de apoyo puedo recibir si tengo dificultades para entender algún concepto del curso?"],
     /* 34 */
-    ["¿Cómo está la economía argentina actualmente?", "¿Puedes darme una actualización sobre la economía argentina?", "¿Qué está pasando con la economía argentina?"],
+    ["¿Cómo puedo aplicar los conocimientos adquiridos en el curso a mi vida cotidiana?"],
     /* 35 */
-    ["¿Cómo puedo ahorrar dinero en mi hogar?", "¿Tienes consejos para la economía del hogar?", "¿Cómo puedo mejorar la economía de mi hogar?"],
+    ["¿Qué diferencia a este programa de otros cursos de educación financiera disponibles en línea?"],
     /* 36 */
-    //["¿Qué es la inflación?", "¿Puedes explicarme qué es la inflación?", "¿Cómo funciona la inflación?"],
+    ["¿Cuál es la duración estimada del programa completo desde el inicio hasta obtener el certificado?"],
     /* 37 */
-    ["¿Cómo afecta la tasa de interés a la economía?", "¿Qué impacto tiene la tasa de interés en la economía?", "¿Por qué es importante la tasa de interés en la economía?"],
+    ["¿Hay alguna restricción de edad para participar en el programa?"],
     /* 38 */
-    //["¿Qué es el PIB?", "¿Puedes explicarme qué es el Producto Interno Bruto?", "¿Cómo se calcula el PIB?"],
+    ["¿Cómo puedo compartir mi experiencia en el curso con otras personas interesadas en mejorar sus habilidades financieras?"],
     /* 39 */
-    ["¿Cómo puedo invertir en la bolsa de valores?", "¿Tienes consejos para invertir en la bolsa?", "¿Qué necesito saber para invertir en la bolsa de valores?"],
+    ["¿Hay oportunidades de networking o colaboración con otros participantes del curso?"],
     /* 40 */
-    ["¿Qué es la devaluación?", "¿Puedes explicarme qué es la devaluación?", "¿Cómo afecta la devaluación a la economía?"],
+    ["¿Qué recursos adicionales puedo encontrar en la plataforma educativa además de los módulos del curso?"],
     /* 41 */
-    ["ortiba", "mierda", "boludo", "pelotudo", "puto", "puta", "boluda", "pelotuda", "mierda", "conchuda", "conchudo", "trolo", "trola", "pija", "pijudo", "putito"]
-];
+    ["¿Puedo acceder al contenido del curso en cualquier momento del día?"],
+    /* 42 */
+    ["¿Puedo recibir asesoramiento personalizado sobre mi situación financiera específica?"],
+    /* 43 */
+    ["¿El programa incluye información sobre impuestos y cómo gestionarlos?"],
+    /* 44 */
+    ["¿Puedo acceder al curso desde cualquier lugar del mundo?"],
+    /* 45 */
+    ["¿El certificado de finalización del curso está reconocido oficialmente por alguna institución educativa o entidad gubernamental?"],
+    /* 46 */
+    ["¿Qué tan rigurosas son las evaluaciones del curso?"],
+    /* 47 */
+    ["¿Hay alguna opción de tutoría individual disponible si necesito ayuda adicional?"],
+    /* 48 */
+    ["¿Qué nivel de interacción puedo esperar con los instructores del curso?"],
+    /* 49 */
+    ["¿El programa incluye ejercicios prácticos para aplicar los conceptos aprendidos?"],
+    /* 50 */
+    ["¿Qué pasa si no puedo completar el curso dentro del plazo que había planeado?"]
+]
 
 const botReply = [
-    /* De repeticion*/
-    ["busco mas información"],
     /* 0 */
     ["¡Hola! 😊", "¡Hola! 👋", "¡Oye! 👍", "¡Hola! 👋"],
     /* 1 */
-    ["Bien... ¿cómo estás? 😄", "Bastante bien, ¿cómo estás? 😊", "Fantástico, ¿cómo estás? 🌟"],
+    ["Puedes inscribirte a través de nuestra plataforma educativa online. Solo necesitas registrarte con tu correo electrónico y completar el formulario de inscripción."],
     /* 2 */
-    ["Mejorando. ¿Ahí? 😄", "¡Un poco bien! 😅", "¡Sí, bien! 🏡"],
+    ["Ser mayor de 18 años y tener acceso a internet. No se requieren conocimientos previos en finanzas."],
     /* 3 */
-    ["Siempre soy joven. 👶"],
+    ["El programa es completamente gratuito."],
     /* 4 */
-    ["¡Adiós! 👋", "¡Adiós! 😊", "¡Por favor, cuídate! 🌼"],
-    /* 4.1 */
-    ["¡Para eso estoy! 👋", "¡A ti por preguntar! 😊", "¡Por favor, no me agaradezcas! 🌼"],    
+    ["Tienes un acceso ilimitado a los contenidos del curso, por lo que puedes completarlo a tu propio ritmo."],
     /* 5 */
-    ["Solo soy un bot 😄", "Soy un bot. ¿Qué eres tú? 🤖", "Soy un extraterrestre que viene a conquistar el mundo 😅", "Solo vas a preguntar por mi o vamos a hablar de verdad! 😊"],
+    ["Al finalizar el curso, recibirás un certificado de educación financiera digital emitido por nuestra institución."],
     /* 6 */
-    ["Roman Agrelo es mi creador 🙌"],
+    ["Actualmente, el curso está disponible solo en español."],
     /* 7 */
-    ["Puedes contactar a CABA 📧</a>"],
+    ["Sí, el curso es accesible desde computadoras, tabletas y teléfonos móviles."],
     /* 8 */
-    ["Puedes contactar a Flavia:<br> Teléfono: <a href='tel:XXXXXXXXX'>XXXXXXX</a> 📱<br> WhatsApp: <a href='https://wa.me /12341234'>12341234</a> 💬"],
+    ["Sí, ofrecemos soporte técnico a través de chat en vivo y correo electrónico."],
     /* 9 */
-    ["Instagram: <a href='https://www.instagram.com/'>@CABA 📷</a>"],
+    ["Puedes guardar tu progreso y continuar donde lo dejaste en cualquier momento."],
     /* 10 */
-    ["Buenos Aires - CABA: <a href='https://bb'>@CABA 🐙</a>"],
+    ["El curso está dividido en seis módulos, cada uno centrado en un aspecto específico de la educación financiera."],
     /* 11 */
-    ["Soy la IA de Economia de Flavia Sarmiento 😊"],
+    ["Incluye videos, lecturas, cuestionarios, simulaciones interactivas y estudios de caso."],
     /* 12 */
-    ["Yo también te amo ❤️", "¡Yo también! 😄", "¡Gracias! Intenta dar tu opinión en WhatsApp: <a href='https://wa.me/12341234'>12341234</a > 💬"],
+    ["Necesitarás acceso a una computadora o dispositivo móvil con internet, y herramientas básicas como Google Sheets y plataformas de simulación financiera online."],
     /* 13 */
-    ["¡Me alegra saber que te sientes feliz! 😄", "¡Eso es genial! 😊", "¡Gracias! Intente enviar comentarios en WhatsApp: <a href='https://wa. me/12341234'>12341234</a> 💬", "¡La diversión siempre es buena 🎉", "la onda 😄", "Fantástica 😃", "Genial 😎", "😊", "¡Impresionante!", "¡Excelente! 👏"],
+    ["Sí, hay foros y grupos de discusión donde puedes interactuar con otros estudiantes."],
     /* 14 */
-    [
-        "Lamento mucho que te sientas así. Es importante hablar con alguien en quien confíes sobre tus sentimientos. ❤️",
-        "No es necesario que pases por esto solo. Pide apoyo a amigos, familiares o un profesional de la salud mental. 🤗",
-        "Estoy aquí para escucharlo y conversar con usted, pero no reemplazo la ayuda profesional. Considere buscar ayuda de un terapeuta o consejero. 🙏",
-        "Recuerda que está bien no estar bien a veces. Tus sentimientos son válidos y hay personas que se preocupan por ti. 💕",
-        "Si lo deseas, podemos charlar sobre tus sentimientos y experiencias. Compartir a veces puede ayudar a aligerar la carga. 📢",
-        "La depresión puede ser un camino difícil, pero hay esperanza y ayuda disponibles. No estás solo en esto. 🌟",
-        "¿Hay algo específico de lo que te gustaría hablar o tienes alguna pregunta? 😊",
-        "Estoy aquí para escuchar. Siéntete libre de compartir tanto o tan poco como te sientas cómodo. 🤗"
-    ],
+    ["Sí, muchos de los recursos, como guías y plantillas, están disponibles para descargar."],
     /* 15 */
-    ["Mi propósito es administrar el club y ayudarte con eventos e información. 🎉"],
+    ["Sí, puedes revisar los módulos tantas veces como sea necesario."],
     /* 16 */
-    ["Lo siento, no puedo proporcionar información meteorológica en tiempo real. Puedes consultar un sitio web o una aplicación meteorológica para obtener las últimas actualizaciones. ☀️"],
+    ["A través de cuestionarios al final de cada módulo y evaluaciones prácticas como estudios de caso y simulaciones."],
     /* 17 */
-    ["¡Ese es un secreto que solo Amaan conoce! 🤫"],
+    ["Sí, completar las evaluaciones es necesario para obtener el certificado de finalización."],
     /* 18 */
-    ["No tengo acceso a datos en tiempo real, incluida la hora actual. Puedes consultar la hora en tu dispositivo o preguntarle a un asistente de voz como Siri o Google Assistant. ⌚"],
+    ["Puedes volver a tomar las evaluaciones hasta que obtengas una calificación aprobatoria."],
     /* 19 */
-    [
-        "Hasta donde yo sé, estamos realizando Esports desde el Club Técnico. 🎮",
-        "Los deportes electrónicos son una de las iniciativas interesantes del Club Técnico y ¡tenemos algunos eventos increíbles programados! 🎉",
-        "¡Los deportes electrónicos están en auge en el Club Técnico! Estén atentos a los próximos eventos y noticias relacionadas con los juegos. 🕹️",
-        "Los deportes electrónicos son un enfoque clave para nosotros en el Technical Club. ¡Tenemos planes y eventos emocionantes en el mundo de los videojuegos! 🚀"
-    ],
+    ["El certificado se genera automáticamente y puedes descargarlo desde la plataforma una vez que completes todos los módulos y evaluaciones."],
     /* 20 */
-    [
-        "Claro, puedo contarles sobre la visita anterior a la escuela. Fue un evento en el que los 4 clubes contribuyeron con sus esfuerzos. ¡Fue una experiencia fantástica para todos los involucrados! 🏫🤝",
-        "La visita escolar anterior fue un esfuerzo de colaboración de los 4 clubes. Fue un evento memorable con muchas actividades e interacciones emocionantes. 📚🤝",
-        "¡Ah, la visita a la escuela! Fue una gran iniciativa en la que los 4 clubes unieron fuerzas para crear una experiencia memorable. ¡El trabajo en equipo y el entusiasmo fueron realmente encomiables! 🌟🤝"
-    ],
-    /* 21  - Economia*/
-    ["Soy la IA de Economia de Flavia Sarmiento 😊", "roman esta ayudando"],
+    ["Sí, el certificado demuestra que tienes conocimientos en educación financiera, lo cual puede ser valioso para empleadores."],
+    /* 21 */
+    ["Puedes restablecer tu contraseña a través de la opción \"Olvidé mi contraseña\" en la página de inicio de sesión."],
     /* 22 */
-    ["Soy la IA de Economia de Flavia Sarmiento 😊", "claro que puedo ayudarte"],
+    ["Puedes enviar preguntas a los instructores a través de los foros de discusión o por correo electrónico."],
     /* 23 */
-    ["Soy la IA de Economia de Flavia Sarmiento 😊", "no estaria entendiendo que necesitas"],
+    ["Actualmente, no ofrecemos mentoría personalizada, pero los foros y grupos de discusión son monitoreados por expertos que pueden responder a tus preguntas."],
     /* 24 */
-    ["Soy la IA de Economia de Flavia Sarmiento 😊", "lo mejor es instruirte"],
-    /* 25*/
-    [
-        "La inflación es el aumento generalizado y sostenido del nivel de precios en un país durante un período de tiempo.",
-        "La inflación se refiere al aumento de los precios de los bienes y servicios en una economía a lo largo del tiempo.",
-        "La inflación es el ritmo al que los precios generales de los bienes y servicios están aumentando.",
-        "La inflación es el aumento generalizado y sostenido del nivel de precios de bienes y servicios en una economía durante un período de tiempo. Cuando el nivel general de precios sube, con cada unidad de moneda se adquieren menos bienes y servicios. Es decir, la inflación refleja la disminución del poder adquisitivo de la moneda.", 
-        "La inflación es el aumento constante de los precios de los bienes y servicios en una economía. Esto puede ser causado por varios factores, incluyendo el aumento de los costos de producción o un aumento en la demanda de bienes y servicios.",        
-    ], 
+    ["Sí, nos aseguramos de que los contenidos sean actuales y relevantes, y se actualizan periódicamente."],
+    /* 25 */
+    ["Sí, hay una lista de lecturas y recursos adicionales recomendados que se proporciona al inicio del curso."],
     /* 26 */
-    [
-        "El PIB es el valor monetario de todos los bienes y servicios finales producidos por un país en un período de tiempo.",
-        "El PIB es una medida de la actividad económica dentro de un país.",
-        "El Producto Interno Bruto(PIB) es la medida más amplia de la actividad económica de un país.Es el valor total de todos los bienes y servicios producidos en un país en un período de tiempo determinado.",
-        "El Producto Interno Bruto (PIB) es una medida de la producción económica de un país. Se calcula sumando el valor de todos los bienes y servicios producidos en el país durante un período de tiempo.",
-        "El PIB se calcula sumando el consumo, la inversión, los gastos del gobierno y las exportaciones netas."
-    ],
+    ["No, cada cuenta es personal e intransferible."],
     /* 27 */
-    ["La educación financiera es un conjunto de habilidades y conocimientos que te permiten entender y manejar tus finanzas personales de manera efectiva.", "La educación financiera se refiere a la capacidad de entender y manejar tus finanzas personales. Esto incluye la comprensión de cómo funciona el dinero, cómo se gana, cómo se administra, cómo se invierte y cómo se protege."],
+    ["Puedes reportar cualquier error a través del sistema de soporte técnico o el foro de discusión."],
     /* 28 */
-    ["Los objetivos de la educación financiera incluyen proporcionar habilidades y conocimientos financieros, enseñar a establecer objetivos financieros, elaborar presupuestos, desarrollar estrategias de ahorro, y facilitar conocimientos para gestionar deudas de manera responsable.", "La educación financiera tiene como objetivo enseñarte a manejar tus finanzas de manera efectiva. Esto incluye aprender a establecer objetivos financieros, hacer un presupuesto, desarrollar estrategias de ahorro y entender cómo manejar tus deudas."],
+    ["El curso es compatible con la mayoría de los navegadores modernos como Chrome, Firefox, Safari y Edge."],
     /* 29 */
-    ["La educación financiera puede mejorar tus perspectivas de empleo al hacerte más atractivo para el mercado laboral. Las habilidades financieras son muy valoradas por los empleadores y pueden abrirte puertas a nuevas oportunidades.", "Con una sólida educación financiera, puedes demostrar a los empleadores potenciales que tienes la capacidad de gestionar eficazmente los recursos financieros. Esto puede hacerte más atractivo para el mercado laboral y mejorar tus perspectivas de empleo."],
+    ["No necesitas habilidades o conocimientos previos en finanzas. El curso está diseñado para principiantes."],
     /* 30 */
-    ["La educación financiera te enseñará a establecer objetivos financieros y a desarrollar estrategias de ahorro a corto, mediano y largo plazo. Esto te ayudará a planificar tu futuro financiero y a evitar el endeudamiento.", "Con la educación financiera, aprenderás a hacer un presupuesto y a desarrollar estrategias de ahorro. Esto te permitirá ahorrar para tus objetivos a corto, mediano y largo plazo."],
+    ["No, necesitas una conexión a internet para acceder a los contenidos del curso y participar en las actividades interactivas."],
     /* 31 */
-    ["La educación financiera te proporcionará las herramientas y estrategias necesarias para gestionar tus deudas de manera responsable. Aprenderás sobre los diferentes tipos de financiamiento disponibles y las implicaciones de cada uno.", "Con la educación financiera, aprenderás a manejar tus deudas de manera efectiva. Esto incluye entender los diferentes tipos de préstamos y créditos disponibles, así como las consecuencias de no cumplir con tus obligaciones financieras."],
+    ["Mejorarás tu capacidad para administrar tu dinero, lo que puede conducir a una mayor estabilidad financiera y mejores oportunidades laborales."],
     /* 32 */
-    ["La educación financiera te introducirá en las diversas opciones de inversión y los productos financieros disponibles. Esto te permitirá tomar decisiones informadas sobre dónde y cómo invertir tu dinero.", "Con la educación financiera, aprenderás sobre las diferentes opciones de inversión disponibles y cómo evaluarlas. También te familiarizarás con los diversos productos financieros que puedes utilizar para alcanzar tus objetivos financieros."],
+    ["El módulo de Emprendedurismo cubre temas como identificación de oportunidades de negocio, desarrollo de planes de negocios, estrategias de marketing y fuentes de financiamiento para emprendedores."],
     /* 33 */
-    ["La educación financiera te introducirá en el uso de herramientas y aplicaciones digitales que facilitan la gestión financiera. Esto incluye la creación de presupuestos, la planificación de inversiones, los pagos de impuestos y la emisión de facturas electrónicas.", "Con la educación financiera, aprenderás a utilizar diversas herramientas y aplicaciones digitales que te ayudarán a manejar tus finanzas. Esto puede incluir aplicaciones para hacer un presupuesto, planificar inversiones, pagar impuestos y emitir facturas electrónicas."],
+    ["Puedes acceder a foros de discusión donde puedes hacer preguntas y recibir ayuda de instructores y otros estudiantes."],
     /* 34 */
-    ["La economía argentina está actualmente enfrentando varios desafíos, incluyendo la inflación, la devaluación de la moneda y la deuda externa. Sin embargo, también hay oportunidades en sectores como la tecnología y la energía renovable.", "La economía argentina ha experimentado altibajos en los últimos años. Actualmente, se enfrenta a desafíos como la inflación y la deuda, pero también hay oportunidades en áreas como la agricultura y la tecnología."],
+    ["El curso proporciona herramientas y estrategias prácticas que puedes aplicar a tu situación financiera personal o profesional."],
     /* 35 */
-    ["Hay varias formas de ahorrar dinero en tu hogar. Esto puede incluir reducir el uso de energía, comprar alimentos en grandes cantidades, y hacer un presupuesto.", "Para mejorar la economía de tu hogar, puedes considerar hacer un presupuesto, reducir gastos innecesarios, y buscar formas de aumentar tus ingresos."],
+    ["Nuestro programa se enfoca en proporcionar una formación integral que abarca desde conceptos básicos hasta estrategias avanzadas, con actividades interactivas y recursos actualizados."],
     /* 36 */
-    //["La inflación es el aumento generalizado y sostenido del nivel de precios de bienes y servicios en una economía durante un período de tiempo. Cuando el nivel general de precios sube, con cada unidad de moneda se adquieren menos bienes y servicios. Es decir, la inflación refleja la disminución del poder adquisitivo de la moneda.", "La inflación es el aumento constante de los precios de los bienes y servicios en una economía. Esto puede ser causado por varios factores, incluyendo el aumento de los costos de producción o un aumento en la demanda de bienes y servicios."],
+    ["La duración del programa depende del ritmo de cada participante, pero en promedio, se estima que tomará varias semanas completarlo."],
     /* 37 */
-    ["La tasa de interés es un factor importante en la economía porque afecta la cantidad de dinero que las personas y las empresas están dispuestas a pedir prestado y a invertir. Las tasas de interés altas pueden desalentar el endeudamiento y la inversión, mientras que las tasas de interés bajas pueden incentivarlos.", 
-    "La tasa de interés tiene un gran impacto en la economía. Puede afectar todo, desde los préstamos para vivienda hasta las inversiones en el mercado de valores. Una tasa de interés más alta significa que es más caro pedir dinero prestado, lo que puede desacelerar el crecimiento económico."],
+    ["Sí, el programa está diseñado para jóvenes y adultos mayores de 18 años."],
     /* 38 */
-    //["El Producto Interno Bruto(PIB) es la medida más amplia de la actividad económica de un país.Es el valor total de todos los bienes y servicios producidos en un país en un período de tiempo determinado.",      "El Producto Interno Bruto (PIB) es una medida de la producción económica de un país. Se calcula sumando el valor de todos los bienes y servicios producidos en el país durante un período de tiempo."    ],
+    ["Puedes compartir tu experiencia a través de redes sociales, recomendando el programa a amigos y familiares, o escribiendo una reseña en línea."],
     /* 39 */
-    ["Invertir en la bolsa de valores puede ser una excelente manera de hacer crecer tu dinero a largo plazo, pero también conlleva riesgos. Es importante investigar y entender las empresas en las que estás invirtiendo, y considerar hablar con un asesor financiero.", "Para invertir en la bolsa de valores, necesitas entender cómo funciona el mercado, qué tipo de inversiones son adecuadas para tus objetivos y tolerancia al riesgo, y estar dispuesto a mantener tus inversiones a largo plazo."],
+    ["Sí, puedes conectarte con otros participantes a través de los foros de discusión y grupos de estudio."],
     /* 40 */
-    ["La devaluación es la disminución del valor de una moneda con respecto a otras monedas. Puede ser el resultado de políticas económicas o de cambios en el mercado. La devaluación puede hacer que las exportaciones de un país sean más competitivas en el mercado mundial, pero también puede llevar a la inflación.", "La devaluación es cuando el valor de una moneda disminuye en comparación con otras monedas. Esto puede hacer que los productos importados sean más caros y los productos exportados sean más baratos."],
+    ["Además de los módulos del curso, encontrarás guías, herramientas, artículos, y videos complementarios para ampliar tus conocimientos."],
     /* 41 */
-    ["Que mal educado, me ofendo! 🤷‍♂️", "no podes decir eso...", "no puedo responder eso, me parece que no me respetas! 🤔", "Dale, somos grandes! 🤨", "La verdad, me estas ofendiendo", "Basta por favor", "No me gusta que escribas eso", "Mi no entender", "Que sucio el que escribe", "Te responderia pero no me lo permiten", "Gracias pero mi codigo no tiene permitido hablar de eso"]
+    ["Sí, la plataforma educativa está disponible las 24 horas del día, los 7 días de la semana, para que puedas acceder en el momento que más te convenga."],
+    /* 42 */
+    ["No ofrecemos asesoramiento financiero personalizado como parte del curso, pero te proporcionamos las herramientas y conocimientos necesarios para tomar decisiones financieras informadas."],
+    /* 43 */
+    ["Sí, algunos módulos abordan temas relacionados con impuestos y cómo gestionarlos correctamente."],
+    /* 44 */
+    ["Sí, siempre y cuando tengas acceso a internet, puedes acceder al curso desde cualquier ubicación."],
+    /* 45 */
+    ["El certificado es emitido por nuestra institución y puede ser utilizado como evidencia de finalización del curso en tu historial educativo o profesional."],
+    /* 46 */
+    ["Las evaluaciones están diseñadas para evaluar tu comprensión de los temas cubiertos en cada módulo y son una parte importante del proceso de aprendizaje."],
+    /* 47 */
+    ["No ofrecemos tutorías individuales, pero puedes recibir apoyo a través de los foros de discusión y otros recursos disponibles en la plataforma."],
+    /* 48 */
+    ["Los instructores están disponibles para responder preguntas y participar en discusiones en los foros de discusión, pero la interacción puede variar según el volumen de participantes y la disponibilidad del instructor."],
+    /* 49 */
+    ["Sí, el curso incluye actividades prácticas como estudios de caso, simulaciones y ejercicios de planificación financiera para reforzar los conceptos aprendidos."],
+    /* 50 */
+    ["No hay ningún problema. Puedes tomar tanto tiempo como necesites para completar el curso, ya que tienes acceso ilimitado a los materiales y recursos."]
 ];
 
 // Ensure the number of responses in botReply matches the number of message groups in userMessage
