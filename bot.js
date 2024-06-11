@@ -1,6 +1,4 @@
 const userMessage = [
-    /* 0 */
-    ["hola", "hola", "hola", "hlo", "hola", "hola"],
     /* 1 */
     ["¿Cómo puedo inscribirme en el programa de educación financiera?"],
     /* 2 */
@@ -104,8 +102,6 @@ const userMessage = [
 ]
 
 const botReply = [
-    /* 0 */
-    ["¡Hola! 😊", "¡Hola! 👋", "¡Oye! 👍", "¡Hola! 👋"],
     /* 1 */
     ["Puedes inscribirte a través de nuestra plataforma educativa online. Solo necesitas registrarte con tu correo electrónico y completar el formulario de inscripción."],
     /* 2 */
